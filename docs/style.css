@@ -42,6 +42,7 @@ body p {
 
 video {
   display: block;
+  z-index: 0;
 }
 
 section {
@@ -56,6 +57,7 @@ header {
   color: #fffff0;
   font-size: xx-large;
   font-weight: bold;
+  z-index: 20;
 }
 
 #liveView {

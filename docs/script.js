@@ -145,7 +145,7 @@ function predictWebcam() {
         header.classList.remove("removed");
         header.innerText =
           "There is a " + predictions[n].class + " in front of you.";
-        header.style = "position: absolute; z-index: 20;";
+        header.style = "position: absolute;";
 
         if (phone === true) {
           p.innerText = predictions[n].class;
@@ -163,7 +163,7 @@ function predictWebcam() {
           (predictions[n].bbox[1] * (window.innerWidth / videoWidth) - 10) +
           "px; width: " +
           (predictions[n].bbox[2] * (window.innerWidth / videoWidth) - 10) +
-          "px; top: 0; left: 0; z-index: 15;";
+          "px; top: 0; left: 0;";
 
         const highlighter = document.createElement("div");
         highlighter.setAttribute("class", "highlighter");
@@ -176,7 +176,7 @@ function predictWebcam() {
           predictions[n].bbox[2] * (window.innerWidth / videoWidth) +
           "px; height: " +
           predictions[n].bbox[3] * (window.innerWidth / videoWidth) +
-          "px; z-index: 10;";
+          "px;";
 
         liveView.appendChild(highlighter);
         liveView.appendChild(p);
